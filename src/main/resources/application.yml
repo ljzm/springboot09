@@ -1,0 +1,31 @@
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sb08
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  profiles:
+    active: pro
+  servlet:
+    multipart:
+      max-file-size: 121979072
+      max-request-size: 421979208
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+    cache: false
+    enabled: true
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+#  mapper-locations: classpath:/mappers/*Mapper.xml
+server:
+  port: 8084
+pagehelper:
+  reasonable: true
+  helper-dialect: mysql
+  page-size-zero: true
